@@ -23,12 +23,12 @@ class Employee {
     this._name = name;
     this._surname = surname;
     this.gender = gender;
-    this.rate = rate;
+    this._rate = rate;
     this.workHours = workHours;
   }
   salary() {
     return `Salary ${this._surname} ${this._name}: ${
-      this.rate * this.workHours
+      this._rate * this.workHours
     }$`;
   }
 
@@ -49,6 +49,17 @@ class Employee {
       throw new TypeError("вкажіть імя та прізвище");
     }
   }
+
+//   get rate() {
+//         return this._rate
+//     }
+//   set rate (newRate) {
+//         if (typeof newRate !== Number|| newRate === " ") {
+//                 throw new TypeError("Вкажіть число");
+//               }
+//               return (this._rate = newRate);
+//     //     }
+// }
 }
 
 const employee1 = new Employee("Slava", `Kozub`, "male", 3, 20);
